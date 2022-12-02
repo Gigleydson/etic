@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-b">
+<head>
+    {% load static %}
+    {% load bootstrap4 %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% bootstrap_css %}
+    <title>Recebimento de Material</title>
+</head>
+<body>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>

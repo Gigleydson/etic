@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="recebimento">
+
+            <h2>Recibimento de Material</h2>
+
+            <form method="post" autocomplete="off">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                    {% buttons %}
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <button type="button" class="btn btn-warning">
+                            <a href="{% url 'recibos' %}">Cancelar</a>
+                        </button>
+                    {% endbuttons %}
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

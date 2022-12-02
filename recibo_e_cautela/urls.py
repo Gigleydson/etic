@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import ReciboView, ListaReciboView
+from .views import ReciboView, CreateReciboView
 
 urlpatterns = [
-    path('recibo', ReciboView.as_view(), name='recibo'),
-    path('lista_recibo', ListaReciboView.as_view(), name='lista_recibo')
+    path('recibos/', ReciboView.as_view(), name='recibos'),
+    path('adicionar/', CreateReciboView.as_view(), name='adicionar_recibo')
 ]

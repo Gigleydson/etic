@@ -1,26 +1,22 @@
-# from django.shortcuts import render
-from django.views.generic import TemplateView
-from django.views.generic import FormView
+from django.views.generic import ListView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 from .models import Recibo
-from .forms import ReciboForm
+from .forms import ReciboModelForm
 
 
-class ReciboView(FormView):
-    template_name = 'recibo.html'
-    form_class = ReciboForm
-    success_url = reverse_lazy('lista_recibo.html')
-
-    def get_context_data(self, **kwargs):
-        context = super(ReciboView, self).get_context_data(**kwargs)
-        return context
+class ReciboView(ListView):
+    models = Recibo
+    template_name = 'recibos.html'
+    queryset = Recibo.objects.all()
+    context_object_name = 'recibos'
 
 
-class ListaReciboView(TemplateView):
-    template_name = 'lista_recibo.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(ListaReciboView, self).get_context_data(**kwargs)
-        context['recibos'] = Recibo.objects.order.all()
-        return context
+class CreateReciboView(CreateView):
+    model = Recibo
+    template_name = 'recibo_form.html'
+    fields = ['nome', 'saram', 'graduacao', 'setor', 'ramal', 'data', 'especificacoes',
+              'observacao', 'sinf', 'lacre', 'bmp', 'quantidade',
+              ]
+    success_url = reverse_lazy('recibos')
