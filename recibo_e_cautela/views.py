@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 
 from .models import Recibo
 from .forms import ReciboModelForm
+from bootstrap_datepicker_plus.widgets import DatePickerInput
 
 
 class ReciboView(ListView):
@@ -20,3 +21,8 @@ class CreateReciboView(CreateView):
               'observacao', 'sinf', 'lacre', 'bmp', 'quantidade',
               ]
     success_url = reverse_lazy('recibos')
+
+    def get_form(self):
+        form = super().get_form()
+        form.fields['data'].widget = DatePickerInput(options={'format': 'DD/MM/YYYY'})
+        return form
