@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'recibo_e_cautela',
     'bootstrap4',
-    'bootstrap_datepicker_plus',
 ]
 
 MIDDLEWARE = [

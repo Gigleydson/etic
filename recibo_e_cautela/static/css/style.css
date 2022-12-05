@@ -6,3 +6,11 @@
 h2{
     margin-bottom: 20px!important;
 }
+
+.form-group button a{
+    color: #000;
+}
+
+form button a:hover{
+    text-decoration: none;
+}

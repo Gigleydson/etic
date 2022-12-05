@@ -7,11 +7,11 @@
 
             <h2>Recibimento de Material</h2>
 
-            <form method="post" autocomplete="off">
+            <form method="post" autocomplete="off" class="row">
                 {% csrf_token %}
-                {% bootstrap_form form %}
-                    {% buttons %}
-                        <button type="submit" class="btn btn-primary">Salvar</button>
+                {% bootstrap_form form form_group_class='form-group col-6' show_label=False %}
+                    {% buttons form_group_class='form-group col-6' %}
+                        <button type="submit" class="btn btn-success">Salvar</button>
                         <button type="button" class="btn btn-warning">
                             <a href="{% url 'recibos' %}">Cancelar</a>
                         </button>

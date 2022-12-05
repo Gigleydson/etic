@@ -27,15 +27,16 @@
                 <td scope="row">{{ recibo.especificacoes }}</td>
                 <td scope="row">{{ recibo.data }}</td>
                 <td>
-                    <a href="#" class="btn btn-warning">Editar</a>
-                    <a href="#" class="btn btn-danger">Deletar</a>
+                    <a href="{% url 'visualizar_recibo' recibo.pk %}" class="btn btn-primary" >Visualizar</a>
+                    <a href="{% url 'update_recibo' recibo.pk %}" class="btn btn-warning">Editar</a>
+                    <a href="{% url 'delete_recibo' recibo.pk %}" class="btn btn-danger">Deletar</a>
                 </td>
             </tr>
           {% endfor %}
           </tbody>
         </table>
 
-      <a href="{% url 'adicionar_recibo' %}" class="btn btn-primary" target="_blank">Novo Recibo</a>
+      <a href="{% url 'adicionar_recibo' %}" class="btn btn-success">Novo Recibo</a>
 
   </div>
 

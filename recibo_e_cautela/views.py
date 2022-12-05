@@ -1,10 +1,9 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 from .models import Recibo
 from .forms import ReciboModelForm
-from bootstrap_datepicker_plus.widgets import DatePickerInput
 
 
 class ReciboView(ListView):
@@ -17,12 +16,25 @@ class ReciboView(ListView):
 class CreateReciboView(CreateView):
     model = Recibo
     template_name = 'recibo_form.html'
-    fields = ['nome', 'saram', 'graduacao', 'setor', 'ramal', 'data', 'especificacoes',
-              'observacao', 'sinf', 'lacre', 'bmp', 'quantidade',
-              ]
+    form_class = ReciboModelForm
     success_url = reverse_lazy('recibos')
 
-    def get_form(self):
-        form = super().get_form()
-        form.fields['data'].widget = DatePickerInput(options={'format': 'DD/MM/YYYY'})
-        return form
+
+class UpdateReciboView(UpdateView):
+    model = Recibo
+    template_name = 'recibo_form.html'
+    form_class = ReciboModelForm
+    success_url = reverse_lazy('recibos')
+
+
+class DeleteReciboView(DeleteView):
+    model = Recibo
+    template_name = 'recibo_delete.html'
+    success_url = reverse_lazy('recibos')
+
+
+class VisualizarReciboView(DetailView):
+    models = Recibo
+    template_name = 'recibo_visualizar.html'
+    queryset = Recibo.objects.filter()
+    context_object_name = 'recibo'
