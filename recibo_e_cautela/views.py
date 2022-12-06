@@ -33,8 +33,8 @@ class DeleteReciboView(DeleteView):
     success_url = reverse_lazy('recibos')
 
 
-class VisualizarReciboView(DetailView):
+class DetailReciboView(DetailView):
     models = Recibo
-    template_name = 'recibo_visualizar.html'
-    queryset = Recibo.objects.filter()
+    template_name = 'recibo_detail.html'
+    queryset = Recibo.objects
     context_object_name = 'recibo'

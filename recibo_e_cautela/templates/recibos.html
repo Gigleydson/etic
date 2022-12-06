@@ -3,7 +3,7 @@
 
 {% block content %}
 
-  <div class="container">
+    <div class="content">
 
       <h1>Recibos</h1>
 
@@ -27,7 +27,7 @@
                 <td scope="row">{{ recibo.especificacoes }}</td>
                 <td scope="row">{{ recibo.data }}</td>
                 <td>
-                    <a href="{% url 'visualizar_recibo' recibo.pk %}" class="btn btn-primary" >Visualizar</a>
+                    <a href="{% url 'detail_recibo' recibo.pk %}" class="btn btn-primary" >Visualizar</a>
                     <a href="{% url 'update_recibo' recibo.pk %}" class="btn btn-warning">Editar</a>
                     <a href="{% url 'delete_recibo' recibo.pk %}" class="btn btn-danger">Deletar</a>
                 </td>
@@ -38,6 +38,6 @@
 
       <a href="{% url 'adicionar_recibo' %}" class="btn btn-success">Novo Recibo</a>
 
-  </div>
+    </div>
 
 {% endblock %}

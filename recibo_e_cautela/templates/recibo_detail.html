@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="content">
+
+    <h2>Detalhes do Recibo</h2>
+
+    <div class="row block-detail">
+      <div class="col-4">
+        <h5>Nome</h5>
+        <p>{{ recibo.nome }}</p>
+      </div>
+
+      <div class="col-4">
+        <h5>Saram</h5>
+        <p>{{ recibo.saram }}</p>
+      </div>
+
+      <div class="col-4">
+        <h5>Posto / Graduação</h5>
+        <p>{{ recibo.graduacao }}</p>
+      </div>
+    </div>
+
+    <div class="row block-detail">
+      <div class="col-4">
+        <h5>Setor</h5>
+        <p>{{ recibo.setor }}</p>
+      </div>
+
+      <div class="col-4">
+        <h5>Ramal</h5>
+        <p>{{ recibo.ramal }}</p>
+      </div>
+
+      <div class="col-4">
+        <h5>Data</h5>
+        <p>{{ recibo.data }}</p>
+      </div>
+    </div>
+
+    <div class="row block-detail">
+      <div class="col-4">
+        <h5>Especificações</h5>
+        <p>{{ recibo.especificacoes }}</p>
+      </div>
+
+      <div class="col-4">
+        <h5>Observação</h5>
+        <p>{{ recibo.observacao }}</p>
+      </div>
+
+      <div class="col-4">
+        <h5>SINF</h5>
+        <p>{{ recibo.sinf }}</p>
+      </div>
+    </div>
+
+    <div class="row block-detail">
+      <div class="col-4">
+        <h5>Lacre</h5>
+        <p>{{ recibo.lacre }}</p>
+      </div>
+
+      <div class="col-4">
+        <h5>BPM</h5>
+        <p>{{ recibo.bmp }}</p>
+      </div>
+
+      <div class="col-4">
+        <h5>Quantidade</h5>
+        <p>{{ recibo.quantidade }}</p>
+      </div>
+    </div>
+
+    <div class="row block-detail">
+      <div class="assinatura">
+        <p>Assinatura:</p>
+      </div>
+
+      <div class="line">
+        <hr>
+      </div>
+    </div>
+
+    <a href="{% url 'recibos' %}" class="btn btn-warning">Voltar</a>
+
+  </div>
+
+{% endblock %}
