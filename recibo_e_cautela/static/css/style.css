@@ -34,3 +34,7 @@ form button a:hover{
     margin-top: 1.1rem;
     border-top: 1px solid #000;
 }
+
+.bt-add{
+    margin-bottom: 30px;
+}

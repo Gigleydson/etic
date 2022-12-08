@@ -9,6 +9,8 @@ from .forms import ReciboModelForm
 class ReciboView(ListView):
     models = Recibo
     template_name = 'recibos.html'
+    paginate_by = 5
+    ordering = '-id'
     queryset = Recibo.objects.all()
     context_object_name = 'recibos'
 

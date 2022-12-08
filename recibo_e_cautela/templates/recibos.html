@@ -7,7 +7,7 @@
 
       <h1>Recibos</h1>
 
-        <table class="table table-striped table-hover">
+        <table class="table table-striped">
           <thead>
               <tr>
                   <th scope="col">Nome</th>
@@ -19,7 +19,7 @@
               </tr>
           </thead>
           <tbody>
-          {% for recibo in recibos %}
+          {% for recibo in page_obj %}
             <tr>
                 <td scope="row">{{ recibo.nome }}</td>
                 <td scope="row">{{ recibo.graduacao }}</td>
@@ -36,7 +36,9 @@
           </tbody>
         </table>
 
-      <a href="{% url 'adicionar_recibo' %}" class="btn btn-success">Novo Recibo</a>
+        <a href="{% url 'adicionar_recibo' %}" class="btn bt-add btn-success">Novo Recibo</a>
+
+        {% include 'paginator.html' %}
 
     </div>
 
