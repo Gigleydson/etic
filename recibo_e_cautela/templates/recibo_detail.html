@@ -4,76 +4,88 @@
 
   <div class="content">
 
-    <h2>Detalhes do Recibo</h2>
+    <h1 class="title-detail">Detalhes do Recibo</h1>
 
     <div class="row block-detail">
       <div class="col-4">
-        <h5>Nome</h5>
-        <p>{{ recibo.nome }}</p>
+        <h3>Nome</h3>
+        <h5>{{ recibo.nome }}</h5>
       </div>
 
       <div class="col-4">
-        <h5>Saram</h5>
-        <p>{{ recibo.saram }}</p>
+        <h3>Saram</h3>
+        <h5>{{ recibo.saram }}</h5>
       </div>
 
       <div class="col-4">
-        <h5>Posto / Graduação</h5>
-        <p>{{ recibo.graduacao }}</p>
+        <h3>Posto / Graduação</h3>
+        <h5>{{ recibo.graduacao }}</h5>
       </div>
     </div>
 
     <div class="row block-detail">
       <div class="col-4">
-        <h5>Setor</h5>
-        <p>{{ recibo.setor }}</p>
+        <h3>Setor</h3>
+        <h5>{{ recibo.setor }}</h5>
       </div>
 
       <div class="col-4">
-        <h5>Ramal</h5>
-        <p>{{ recibo.ramal }}</p>
+        <h3>Ramal</h3>
+        <h5>{{ recibo.ramal }}</h5>
       </div>
 
       <div class="col-4">
-        <h5>Data</h5>
-        <p>{{ recibo.data }}</p>
+        <h3>Data</h3>
+        <h5>{{ recibo.data }}</h5>
       </div>
     </div>
 
     <div class="row block-detail">
       <div class="col-4">
-        <h5>Especificações</h5>
-        <p>{{ recibo.especificacoes }}</p>
+        <h3>Lacre</h3>
+        <h5>{{ recibo.lacre }}</h5>
       </div>
 
       <div class="col-4">
-        <h5>Observação</h5>
-        <p>{{ recibo.observacao }}</p>
+        <h3>BPM</h3>
+        <h5>{{ recibo.bmp }}</h5>
       </div>
 
       <div class="col-4">
-        <h5>SINF</h5>
-        <p>{{ recibo.sinf }}</p>
+        <h3>SINF</h3>
+        <h5>{{ recibo.sinf }}</h5>
       </div>
     </div>
 
     <div class="row block-detail">
       <div class="col-4">
-        <h5>Lacre</h5>
-        <p>{{ recibo.lacre }}</p>
+        <h3>Especificações</h3>
+        <h5>{{ recibo.especificacoes }}</h5>
       </div>
 
       <div class="col-4">
-        <h5>BPM</h5>
-        <p>{{ recibo.bmp }}</p>
+        <h3>Observação</h3>
+        <h5>{{ recibo.observacao }}</h5>
       </div>
 
       <div class="col-4">
-        <h5>Quantidade</h5>
-        <p>{{ recibo.quantidade }}</p>
+        <h3>Quantidade</h3>
+        <h5>{{ recibo.quantidade }}</h5>
       </div>
     </div>
 
+    <div class="row">
+      <div class="assinatura">
+        <p>Assinatura:</p>
+      </div>
+
+      <div class="line">
+        <hr>
+      </div>
+    </div>
+
+
+    <!--
     <div class="row">
       <div class="col-6">
         <a href="{% url 'recibos' %}" class="btn btn-warning">Voltar</a>
@@ -89,7 +101,7 @@
         </div>
       </div>
     </div>
-
+    -->
   </div>
 
 {% endblock %}

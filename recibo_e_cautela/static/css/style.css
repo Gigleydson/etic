@@ -2,8 +2,16 @@
     margin: 20px auto 40px!important;
 }
 
+.title-detail{
+    margin-bottom: 50px;
+}
+
 h2{
     margin-bottom: 20px!important;
+}
+
+h5{
+    color: #6e7076;
 }
 
 .form-group button a{
@@ -15,7 +23,7 @@ form button a:hover{
 }
 
 .block-detail{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .assinatura{

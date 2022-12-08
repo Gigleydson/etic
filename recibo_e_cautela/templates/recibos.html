@@ -27,7 +27,7 @@
                 <td scope="row">{{ recibo.especificacoes }}</td>
                 <td scope="row">{{ recibo.data }}</td>
                 <td>
-                    <a href="{% url 'detail_recibo' recibo.pk %}" class="btn btn-primary" >Detalhes</a>
+                    <a href="{% url 'detail_recibo' recibo.pk %}" class="btn btn-primary" target="_blank" >Detalhes</a>
                     <a href="{% url 'update_recibo' recibo.pk %}" class="btn btn-warning">Editar</a>
                     <a href="{% url 'delete_recibo' recibo.pk %}" class="btn btn-danger">Deletar</a>
                 </td>
