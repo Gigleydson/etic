@@ -6,77 +6,59 @@
 
     <h1 class="title-detail">Detalhes do Recibo</h1>
 
-    <div class="row block-detail">
-      <div class="col-4">
-        <h3>Nome</h3>
-        <h5>{{ recibo.nome }}</h5>
-      </div>
+    <table class="table table-detail table-striped">
+      <tr>
+        <th scope="col"><h3>Nome</h3></th>
+        <th scope="col"><h3>Saram</h3></th>
+        <th scope="col"><h3>Posto / Graduação</h3></th>
+      </tr>
 
-      <div class="col-4">
-        <h3>Saram</h3>
-        <h5>{{ recibo.saram }}</h5>
-      </div>
+      <tr>
+        <td scope="row"><h5>{{ recibo.nome }}</h5></td>
+        <td scope="row"><h5>{{ recibo.saram }}</h5></td>
+        <td scope="row"><h5>{{ recibo.graduacao }}</h5></td>
+      </tr>
 
-      <div class="col-4">
-        <h3>Posto / Graduação</h3>
-        <h5>{{ recibo.graduacao }}</h5>
-      </div>
-    </div>
+      <tr>
+        <th scope="col"><h3>Setor</h3></th>
+        <th scope="col"><h3>Ramal</h3></th>
+        <th scope="col"><h3>Data</h3></th>
+      </tr>
 
-    <div class="row block-detail">
-      <div class="col-4">
-        <h3>Setor</h3>
-        <h5>{{ recibo.setor }}</h5>
-      </div>
+      <tr>
+        <td scope="row"><h5>{{ recibo.setor }}</h5></td>
+        <td scope="row"><h5>{{ recibo.ramal }}</h5></td>
+        <td scope="row"><h5>{{ recibo.data }}</h5></td>
+      </tr>
 
-      <div class="col-4">
-        <h3>Ramal</h3>
-        <h5>{{ recibo.ramal }}</h5>
-      </div>
+      <tr>
+        <th scope="col"><h3>Lacre</h3></th>
+        <th scope="col"><h3>BPM</h3></th>
+        <th scope="col"><h3>SINF</h3></th>
+      </tr>
 
-      <div class="col-4">
-        <h3>Data</h3>
-        <h5>{{ recibo.data }}</h5>
-      </div>
-    </div>
+      <tr>
+        <td scope="row"><h5>{{ recibo.lacre }}</h5></td>
+        <td scope="row"><h5>{{ recibo.bmp }}</h5></td>
+        <td scope="row"><h5>{{ recibo.sinf }}</h5></td>
+      </tr>
 
-    <div class="row block-detail">
-      <div class="col-4">
-        <h3>Lacre</h3>
-        <h5>{{ recibo.lacre }}</h5>
-      </div>
+      <tr>
+        <th scope="col"><h3>Especificações</h3></th>
+        <th scope="col"><h3>Observação</h3></th>
+        <th scope="col"><h3>Quantidade</h3></th>
+      </tr>
 
-      <div class="col-4">
-        <h3>BPM</h3>
-        <h5>{{ recibo.bmp }}</h5>
-      </div>
-
-      <div class="col-4">
-        <h3>SINF</h3>
-        <h5>{{ recibo.sinf }}</h5>
-      </div>
-    </div>
-
-    <div class="row block-detail">
-      <div class="col-4">
-        <h3>Especificações</h3>
-        <h5>{{ recibo.especificacoes }}</h5>
-      </div>
-
-      <div class="col-4">
-        <h3>Observação</h3>
-        <h5>{{ recibo.observacao }}</h5>
-      </div>
-
-      <div class="col-4">
-        <h3>Quantidade</h3>
-        <h5>{{ recibo.quantidade }}</h5>
-      </div>
-    </div>
+      <tr>
+        <td scope="row"><h5>{{ recibo.especificacoes }}</h5></td>
+        <td scope="row"><h5>{{ recibo.observacao }}</h5></td>
+        <td scope="row"><h5>{{ recibo.quantidade }}</h5></td>
+      </tr>
+    </table>
 
     <div class="row">
       <div class="assinatura">
-        <p>Assinatura:</p>
+        <h5>Assinatura:</h5>
       </div>
 
       <div class="line">
