@@ -44,9 +44,14 @@ form button a:hover{
 }
 
 .bt-add{
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    float: right;
 }
 
 .table-detail{
-    margin-bottom: 70px!important;
+    margin-bottom: 50px!important;
+}
+
+.block-assinatura{
+    float:right;
 }

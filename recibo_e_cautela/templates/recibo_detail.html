@@ -4,86 +4,89 @@
 
   <div class="content">
 
-    <h1 class="title-detail">Detalhes do Recibo</h1>
+    <div class="block-pdf">
 
-    <table class="table table-detail table-striped">
-      <tr>
-        <th scope="col"><h3>Nome</h3></th>
-        <th scope="col"><h3>Saram</h3></th>
-        <th scope="col"><h3>Posto / Graduação</h3></th>
-      </tr>
+      <h2 class="title-detail">Detalhes do Recibo</h2>
 
-      <tr>
-        <td scope="row"><h5>{{ recibo.nome }}</h5></td>
-        <td scope="row"><h5>{{ recibo.saram }}</h5></td>
-        <td scope="row"><h5>{{ recibo.graduacao }}</h5></td>
-      </tr>
+      <table class="table table-detail table-striped">
+        <tr>
+          <th scope="col"><h5>Nome</h5></th>
+          <th scope="col"><h5>Saram</h5></th>
+          <th scope="col"><h5>Posto / Graduação</h5></th>
+        </tr>
 
-      <tr>
-        <th scope="col"><h3>Setor</h3></th>
-        <th scope="col"><h3>Ramal</h3></th>
-        <th scope="col"><h3>Data</h3></th>
-      </tr>
+        <tr>
+          <td scope="row"><h6>{{ recibo.nome }}</h6></td>
+          <td scope="row"><h6>{{ recibo.saram }}</h6></td>
+          <td scope="row"><h6>{{ recibo.graduacao }}</h6></td>
+        </tr>
 
-      <tr>
-        <td scope="row"><h5>{{ recibo.setor }}</h5></td>
-        <td scope="row"><h5>{{ recibo.ramal }}</h5></td>
-        <td scope="row"><h5>{{ recibo.data }}</h5></td>
-      </tr>
+        <tr>
+          <th scope="col"><h5>Setor</h5></th>
+          <th scope="col"><h5>Ramal</h5></th>
+          <th scope="col"><h5>Data</h5></th>
+        </tr>
 
-      <tr>
-        <th scope="col"><h3>Lacre</h3></th>
-        <th scope="col"><h3>BPM</h3></th>
-        <th scope="col"><h3>SINF</h3></th>
-      </tr>
+        <tr>
+          <td scope="row"><h6>{{ recibo.setor }}</h6></td>
+          <td scope="row"><h6>{{ recibo.ramal }}</h6></td>
+          <td scope="row"><h6>{{ recibo.data }}</h6></td>
+        </tr>
 
-      <tr>
-        <td scope="row"><h5>{{ recibo.lacre }}</h5></td>
-        <td scope="row"><h5>{{ recibo.bmp }}</h5></td>
-        <td scope="row"><h5>{{ recibo.sinf }}</h5></td>
-      </tr>
+        <tr>
+          <th scope="col"><h5>Lacre</h5></th>
+          <th scope="col"><h5>BPM</h5></th>
+          <th scope="col"><h5>SINF</h5></th>
+        </tr>
 
-      <tr>
-        <th scope="col"><h3>Especificações</h3></th>
-        <th scope="col"><h3>Observação</h3></th>
-        <th scope="col"><h3>Quantidade</h3></th>
-      </tr>
+        <tr>
+          <td scope="row"><h6>{{ recibo.lacre }}</h6></td>
+          <td scope="row"><h6>{{ recibo.bmp }}</h6></td>
+          <td scope="row"><h6>{{ recibo.sinf }}</h6></td>
+        </tr>
 
-      <tr>
-        <td scope="row"><h5>{{ recibo.especificacoes }}</h5></td>
-        <td scope="row"><h5>{{ recibo.observacao }}</h5></td>
-        <td scope="row"><h5>{{ recibo.quantidade }}</h5></td>
-      </tr>
-    </table>
+        <tr>
+          <th scope="col"><h5>Especificações</h5></th>
+          <th scope="col"><h5>Observação</h5></th>
+          <th scope="col"><h5>Quantidade</h5></th>
+        </tr>
 
-    <div class="row">
-      <div class="assinatura">
-        <h5>Assinatura:</h5>
-      </div>
+        <tr>
+          <td scope="row"><h6>{{ recibo.especificacoes }}</h6></td>
+          <td scope="row"><h6>{{ recibo.observacao }}</h6></td>
+          <td scope="row"><h6>{{ recibo.quantidade }}</h6></td>
+        </tr>
+      </table>
 
-      <div class="line">
-        <hr>
-      </div>
-    </div>
-
-
-    <!--
-    <div class="row">
-      <div class="col-6">
-        <a href="{% url 'recibos' %}" class="btn btn-warning">Voltar</a>
-      </div>
-
-      <div class="col-6">
+      <div class="block-assinatura">
         <div class="assinatura">
-          <p>Assinatura:</p>
+          <h6>Assinatura:</h6>
         </div>
 
         <div class="line">
           <hr>
         </div>
       </div>
+
+
+      <!--
+      <div class="row">
+        <div class="assinatura">
+          <h5>Assinatura:</h5>
+        </div>
+
+        <div class="line">
+          <hr>
+        </div>
+      </div>
+      -->
+
     </div>
-    -->
+
+    <button onclick="gerarPDF()" type="button" class="btn btn-success">PDF</button>
+
+    <a href="{% url 'recibos' %}" class="btn btn-warning">Voltar</a>
+
   </div>
 
 {% endblock %}
