@@ -7,12 +7,25 @@
 
       <h1>Recibos</h1>
 
+        <form action="?" method="get">
+            <div class="block-busca">
+                <div class="input-busca">
+                    <input type="text" class="form-control" name="busca" value="{{ request.GET.busca }}" autocomplete="off" placeholder="Digite o nome ou saram">
+                </div>
+                <div class="bt-busca">
+                    <button type="submit" class="btn btn-success">Buscar</button>
+                    <a href="{% url 'recibos' %}" class="btn btn-secondary">Limpar</a>
+                </div>
+            </div>
+        </form>
+
+
         <table class="table table-striped">
           <thead>
               <tr>
                   <th scope="col">Nome</th>
                   <th scope="col">Posto / Graduação</th>
-                  <th scope="col">Ramal</th>
+                  <th scope="col">Saram</th>
                   <th scope="col">Especificações</th>
                   <th scope="col">Data</th>
                   <th scope="col">Ação</th>
@@ -23,7 +36,7 @@
             <tr>
                 <td scope="row">{{ recibo.nome }}</td>
                 <td scope="row">{{ recibo.graduacao }}</td>
-                <td scope="row">{{ recibo.ramal }}</td>
+                <td scope="row">{{ recibo.saram }}</td>
                 <td scope="row">{{ recibo.especificacoes }}</td>
                 <td scope="row">{{ recibo.data }}</td>
                 <td>

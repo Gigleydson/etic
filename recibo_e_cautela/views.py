@@ -10,9 +10,19 @@ class ReciboView(ListView):
     models = Recibo
     template_name = 'recibos.html'
     paginate_by = 5
-    ordering = '-id'
-    queryset = Recibo.objects.all()
+    # ordering = '-id'
+    # queryset = Recibo.objects.all()
     context_object_name = 'recibos'
+
+    def get_queryset(self):
+        busca = self.request.GET.get('busca')
+
+        if busca:
+            recibos = Recibo.objects.filter(nome__contains=busca) or Recibo.objects.filter(saram__contains=busca)
+        else:
+            recibos = Recibo.objects.all().order_by('-id')
+
+        return recibos
 
 
 class CreateReciboView(CreateView):

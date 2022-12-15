@@ -55,3 +55,17 @@ form button a:hover{
 .block-assinatura{
     float:right;
 }
+
+.block-busca{
+    float: right;
+    margin-bottom: 30px;
+}
+
+.input-busca{
+    float: left;
+}
+
+.bt-busca{
+    float: right;
+    margin-left: 10px;
+}
