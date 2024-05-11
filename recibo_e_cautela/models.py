@@ -24,7 +24,7 @@ class Recibo(Base):
     sinf = models.CharField('SINF', max_length=4)
     lacre = models.CharField('Lacre', max_length=7)
     bmp = models.CharField('BMP', max_length=10)
-    quantidade = models.IntegerField('Quantidade') # Retirada do max_lenght 100
+    quantidade = models.IntegerField('Quantidade') # Retirada do max_lenght
 
     def __str__(self):
         return self.nome
